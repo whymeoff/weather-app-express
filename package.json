@@ -1,0 +1,22 @@
+{
+  "name": "weather-app-express",
+  "version": "1.0.0",
+  "description": "Some weather app with express server!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whymeoff/weather-app-express.git"
+  },
+  "author": "Mark K.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/whymeoff/weather-app-express/issues"
+  },
+  "homepage": "https://github.com/whymeoff/weather-app-express#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
