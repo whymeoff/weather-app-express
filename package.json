@@ -18,6 +18,7 @@
   "homepage": "https://github.com/whymeoff/weather-app-express#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "hbs": "^4.0.6"
+    "hbs": "^4.0.6",
+    "request": "^2.88.0"
   }
 }
