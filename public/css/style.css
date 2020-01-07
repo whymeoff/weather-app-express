@@ -39,3 +39,7 @@ header a {
 .portrait {
     width: 250px;
 }
+
+#out {
+    margin-top: 16px;
+}

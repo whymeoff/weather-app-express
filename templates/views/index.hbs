@@ -11,9 +11,19 @@
 <body>
     <div class="main-content">
         {{>header}}
+        
         <p>Use this site to get weather</p>
+
+        <form action="">
+            <input type="text" placeholder="Type your location" id="search-input">
+            <button id="search-button">Search</button>
+        </form>
+
+        <div id="out"></div>
     </div>
 
     {{>footer}}
+
+    <script src="/js/index.js"></script>
 </body>
 </html>

@@ -47,14 +47,14 @@ app.get('/weather', (req, res) => {
         })
     }
 
-    geoLocation(req.query.address, (err, data) => {
+    geoLocation(req.query.address, (err, {lat, long} = {}) => {
         if (err) {
             return res.send({
                 error: err
             })
         }
         
-        forecast(data.lat, data.long, (err, data) => {
+        forecast(lat, long, (err, data) => {
             if (err) {
                 return res.send({
                     error: err
