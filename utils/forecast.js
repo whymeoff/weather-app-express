@@ -11,7 +11,8 @@ const forecast = (lat, long, callback) => {
         } else {
             callback('', {
                 timezone: body.timezone,
-                maxTemp: body.daily.data[0].temperatureHigh, 
+                maxTemp: body.daily.data[0].temperatureHigh,
+                lowTemp: body.daily.data[0].temperatureLow, 
                 temp: body.currently.temperature, 
                 precipProbability: body.daily.data[0].precipProbability
             });

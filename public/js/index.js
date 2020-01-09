@@ -10,7 +10,7 @@ weatherForm.addEventListener('submit', (e) => {
             if (data.error) {
                 out.innerHTML = data.error;
             } else {
-                out.innerHTML = `Your location is: ${data.timezone}. Temperature now is: ${data.temp}. Max temperature is: ${data.maxTemp}. The chance of rain is: ${data.precipProbability}%.`;
+                out.innerHTML = `Your location is: ${data.timezone}. Temperature now is: ${data.temp}. Max temperature is: ${data.maxTemp}. The lowest temperature is: ${data.lowTemp}. The chance of rain is: ${data.precipProbability}%.`;
             }
         })
     })
