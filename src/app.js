@@ -41,30 +41,20 @@ app.get('/help', (req, res) => {
     })
 })
 
-app.get('/weather', (req, res) => {
+app.get('/weather', async (req, res) => {
     if (!req.query.address) {
         return res.send({
             error: 'You must provide an address!'
         })
     }
 
-    geoLocation(req.query.address, (err, {lat, long} = {}) => {
-        if (err) {
-            return res.send({
-                error: err
-            })
-        }
-        
-        forecast(lat, long, (err, data) => {
-            if (err) {
-                return res.send({
-                    error: err
-                })
-            }
-
-            res.send(data);
-        })
-    })
+    try {
+        const {lat, long} = await geoLocation(req.query.address)
+        const data = await forecast(lat, long)
+        res.send(data)
+    } catch (e) {
+        res.send(e)
+    }
 })
 
 app.get('/help/*', (req, res) => {
